@@ -5,8 +5,13 @@ export class Home extends React.Component {
     super();
     this.state = {
       age: props.age,
-      homeLink: "changedLink"
+      homeLink: props.homeLink
     };
+  }
+  onInputChange(event) {
+    this.setState({
+      homeLink: event.target.value
+    });
   }
   onLinkChange() {
     console.log(this.state.homeLink);
@@ -28,6 +33,7 @@ export class Home extends React.Component {
         <button className="btn btn-primary" onClick={this.onMakeOlder.bind(this)}>Make me older</button>
         <br/>
         <button className="btn btn-primary" onClick={this.props.greet}>GREET</button>
+        <input value={this.state.homeLink} onChange={this.onInputChange.bind(this)}/>
         <button className="btn btn-primary" onClick={this.onLinkChange.bind(this)}>Chnagelink</button>
       </div>
     );

@@ -29,7 +29,13 @@ onGreet() {
 				</div>
 				<div className="row">
 					<div className="col-xs-10 col-xs-offset-1">
-						<Home name={"Harsh"} age="21" greet={this.onGreet} linkChange={this.onHomeLinkChange.bind(this)}/>
+						<Home
+							name={"Harsh"}
+							age="21"
+							greet={this.onGreet}
+							linkChange={this.onHomeLinkChange.bind(this)}
+							homeLink = {this.state.homeLink}
+						/>
 					</div>
 				</div>
 			</div>
