@@ -4,6 +4,9 @@ import { Header } from "./components/Header"
 import { Home } from "./components/Home"
 
 class App extends React.Component {
+onGreet() {
+	alert("greet");
+}
 	render() {
 		return (
 			<div className="container">
@@ -14,7 +17,7 @@ class App extends React.Component {
 				</div>
 				<div className="row">
 					<div className="col-xs-10 col-xs-offset-1">
-						<Home name={"Harsh"} age="21" />
+						<Home name={"Harsh"} age="21" greet={this.onGreet} />
 					</div>
 				</div>
 			</div>
